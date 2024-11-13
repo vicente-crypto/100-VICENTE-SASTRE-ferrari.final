@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Departamentos en Punta del Este</title>
-    <link rel="stylesheet" href="style.css">
+    <title>ferrari</title>
+    <link rel="stylesheet" href="ferrari.css">
     <style>
         /* Estilos generales */
         body {
@@ -21,59 +21,94 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 20px;
+            gap: 20px; /* Espacio entre elementos */
             background-color: #fff;
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
         }
 
-        .anuncio img {
-            max-width: 100px;
-            border-radius: 8px;
+        .anuncio {
+             max-width: 728%;
+             height: 90px;
+             border: none;
+             display: block;
+             margin: auto;
         }
 
-        .anuncio .contenido {
-            max-width: 500px;
+
+
+
+
+
+
+        .logo, .ad-image {
+            height: 75px;
+            margin: 10px;
         }
 
-        .anuncio .contenido h2 {
-            font-size: 1.5em;
-            margin: 0;
+        .logo:hover, .ad-image:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease-in-out;
         }
 
-        .anuncio .contenido p {
-            font-size: 1em;
-            margin: 10px 0;
-            color: #666;
-        }
-
-        .anuncio .contenido a {
-            display: inline-block;
-            margin-top: 10px;
-            padding: 10px 20px;
-            background-color: #d40000;
-            color: #fff;
+        /* Estilo del botón */
+        .btn-visitar {
             text-decoration: none;
+            background-color: #fd1f1f; /* Color del botón */
+            color: white;
+            padding: 10px 20px;
             border-radius: 5px;
+            margin-top: 0; /* Eliminar margen superior */
+            font-weight: bold;
             transition: background-color 0.3s ease;
+            display: inline-block;
         }
 
-        .anuncio .contenido a:hover {
-            background-color: #ff3300;
+        .btn-visitar:hover {
+            background-color: #0056b3; /* Color al pasar el mouse */
         }
+
+        /* Estilos para pantallas pequeñas */
+        @media (max-width: 727px) {
+            .anuncio {
+                flex-direction: column; /* Cambiar disposición a vertical en pantallas pequeñas */
+                gap: 10px;
+            }
+
+            .logo, .ad-image {
+                height: 100px;
+            }
+
+            body {
+                display: block;
+                padding: 10px;
+            }
+
+            .anuncio {
+                 width: 300px;
+                 height: 600px;
+                 display: block;
+                  margin: auto;
+            }
+
+        }
+
     </style>
 </head>
 <body>
-
     <div class="anuncio">
-        <img src="imagenes/puntadeleste.jpg" alt="Vista de Punta del Este">
-        <div class="contenido">
-            <h2>Departamentos en Punta del Este</h2>
-            <p>Descubre lujosos departamentos con vista al mar en el corazón de Punta del Este. Vive la exclusividad y el confort en el mejor destino de Uruguay.</p>
-            <a href="departamentos.html">Ver más</a>
-        </div>
-    </div>
+        <a href="index.html" target="_blank">
+            <img class="logo" src="imagenes/imagenes:grandes.jpeg/Ferrari-Scuderia.png" alt="Logo">"
+        </a>
 
+        <!-- Botón centrado y en la misma línea que las imágenes -->
+        <a href="index.html" target="_blank" class="btn-visitar">Visitar Página</a>
+
+        <a href="otra-pagina.html" target="_blank">
+            <img class="ad-image" src="imagenes/imagenes:grandes.jpeg/anuncioferrari.jpg" alt="Anuncio">
+        </a>
+    </div>
 </body>
 </html>
